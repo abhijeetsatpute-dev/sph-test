@@ -1,0 +1,5 @@
+name: WS QR Code
+type: module
+description: Module to generate qr code from link for products
+package: Custom
+core_version_requirement: ^9 || ^10

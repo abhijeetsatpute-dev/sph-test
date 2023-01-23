@@ -1,0 +1,28 @@
+<?php
+
+/**
+ * @file
+ * Primary module hooks for ws_qr_code module.
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function ws_qr_code_theme($existing, $type, $theme, $path) {
+  return [
+    'qr_code_block' => [
+      'template' => 'qr-code-block',
+      'variables' => [
+        'qr_data' => NULL,
+      ],
+    ],
+    'node__product' => [
+      'template' => 'node--product',
+      'base hook' => 'node',
+    ],
+    'node__product__teaser' => [
+      'template' => 'node--product--teaser',
+      'base hook' => 'node',
+    ],
+  ];
+}

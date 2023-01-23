@@ -1,0 +1,11 @@
+<div class="block-content">
+  <fieldset>
+    <legend>{{ 'Scan here on your mobile' |t }}</legend>
+    <p>{{ 'To purchase this product on our app to avail exclusive app-only' |t }}</p>
+    {% if qr_data is not empty %}
+      <img src="data:{{ qr_data }}">
+    {% else %}
+      {{ 'Purchase link not available' |t }}
+    {% endif %}
+  </fieldset>
+</div>

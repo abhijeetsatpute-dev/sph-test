@@ -1,0 +1,17 @@
+{
+    "name": "drupal/ws_qr_code",
+    "description": "Module for product list QR Code.",
+    "type": "drupal-custom-module",
+    "license": "GPL-2.0+",
+    "authors": [
+        {
+            "name": "Abhijeet Satpute",
+            "email": "abhijeetsatpute.dev@gmail.com"
+        }
+    ],
+    "require": {
+        "endroid/qr-code": "^4.7"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

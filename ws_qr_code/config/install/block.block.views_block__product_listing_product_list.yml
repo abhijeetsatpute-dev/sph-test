@@ -1,0 +1,28 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.product_listing
+  module:
+    - system
+    - views
+  theme:
+    - olivero
+id: views_block__product_listing_product_list
+theme: olivero
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:product_listing-product_list'
+settings:
+  id: 'views_block:product_listing-product_list'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the ws_qr_code module.
+ */
+
+/**
+ * Implements hook_uninstall().
+ */
+function ws_qr_code_uninstall() {
+  // Delete existing nodes of products.
+  $storage_handler = \Drupal::entityTypeManager()->getStorage('node');
+  $nodes = $storage_handler->loadByProperties(['type' => 'product']);
+  if (count($nodes) > 0) {
+    $storage_handler->delete($nodes);
+  }
+  // Delete product content type.
+  $content_type = \Drupal::entityTypeManager()->getStorage('node_type')->load('product');
+  if ($content_type != NULL) {
+    $content_type->delete();
+  }
+
+}
